@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "hire",
+  "version": "0.1.0",
+  "description": "Delegate coding tasks to external coding agent CLIs (codex, cursor-agent) through one protocol: self-contained prompts, permission tiers, session resume, result verification.",
+  "author": {
+    "name": "yangtau",
+    "email": "yanggtau@gmail.com"
+  },
+  "repository": "https://github.com/yangtau/claude-agents-plugins",
+  "license": "MIT",
+  "keywords": ["delegation", "codex", "cursor", "multi-agent"],
+  "skills": [
+    "./"
+  ]
+}

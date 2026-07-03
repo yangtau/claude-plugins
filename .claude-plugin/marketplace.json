@@ -1,0 +1,22 @@
+{
+  "name": "claude-agents-plugins",
+  "owner": {
+    "name": "yangtau",
+    "email": "yanggtau@gmail.com"
+  },
+  "metadata": {
+    "description": "Plugins for delegating work from Claude Code to other coding agents.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "hire",
+      "description": "Delegate coding tasks to external coding agent CLIs (codex, cursor-agent) through one protocol: self-contained prompts, permission tiers, session resume, result verification.",
+      "version": "0.1.0",
+      "author": {
+        "name": "yangtau"
+      },
+      "source": "./plugins/hire"
+    }
+  ]
+}
