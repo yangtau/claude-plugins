@@ -6,7 +6,7 @@ A [Claude Code](https://claude.com/claude-code) plugin marketplace for delegatin
 
 ```
 /plugin marketplace add yangtau/claude-plugins
-/plugin install hire@claude-agents-plugins
+/plugin install hire@claude-plugins
 ```
 
 ## Plugins
@@ -25,6 +25,28 @@ Spend another subscription's tokens instead of Claude's, and get verification fr
 ```
 
 Requires the target CLI ([codex](https://github.com/openai/codex) or [cursor-agent](https://cursor.com/cli)) to be installed and logged in. See the [plugin README](plugins/hire/README.md) for details.
+
+#### Pairing with CLAUDE.md
+
+The skill is the delegation *procedure*; the *routing policy* — when to delegate at all, and which model for which kind of work — must be evaluated before the skill triggers, so it belongs in your always-loaded `CLAUDE.md`, not in the plugin. A starting point to adapt:
+
+```markdown
+# Orchestration
+
+- Delegate to /hire: clear-spec implementation, bulk mechanical edits,
+  independent review, parallelizable work.
+- Keep on the main agent: emerging specs, tight iteration with the user,
+  quality-critical work.
+- Context travels via files: write spec, constraints, and session ids into
+  a file and pass the path.
+- Session reuse: one executor session per workstream; independent reviews
+  always get a fresh session.
+
+Task → model (adjust to your own subscriptions and their costs):
+- bulk/mechanical work → codex
+- fast turnaround over depth → cursor-agent
+- plan/implementation reviews → either, as an independent perspective
+```
 
 ## Layout
 
