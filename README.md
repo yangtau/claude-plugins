@@ -1,12 +1,12 @@
-# claude-plugins
+# claude-agents-plugins
 
 A [Claude Code](https://claude.com/claude-code) plugin marketplace for delegating work from Claude Code to other coding agents.
 
 ## Installation
 
 ```
-/plugin marketplace add yangtau/claude-plugins
-/plugin install hire@claude-plugins
+/plugin marketplace add yangtau/claude-agents-plugins
+/plugin install hire@claude-agents-plugins
 ```
 
 ## Plugins
